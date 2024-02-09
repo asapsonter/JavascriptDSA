@@ -21,7 +21,4 @@ console.log(primeNum(4));
 console.log(primeNum(5));
 console.log(primeNum(8));
 
-console.log(primeNum(2));
-console.log(primeNum(4));
-console.log(primeNum(5));
-console.log(primeNum(8));
+
