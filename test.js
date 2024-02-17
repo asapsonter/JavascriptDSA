@@ -22,18 +22,14 @@ function cal_pairs(n) {
 }
 console.log(cal_pairs([6]));*/
 
-// getting an array of factors of n
-function factorsOf(n){
-    // declare emtpy array to store factors
-    let factors = []
-    //loop through n
-    for(let i=1; i <= n; i++){
-        //check if number in loop is a factor of n
-        if(n%i===0){
-            //push factors to empty list
-        factors.push(i);
-        }
-    }
-    return factors
+
+let arr = [1,2,3,4,5,6]
+arr.unshift('sam')
+arr.pop()
+arr.shift()
+arr.push(8)
+for (const items of arr){
+  console.log(items);
 }
-console.log(factorsOf(5));
+
+
