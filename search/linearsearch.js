@@ -18,6 +18,8 @@ function linear (arr, target) {
   }
   return -1;
 }
+
+// big = O(n)
 function linear_search(list , n ,target){
 
 
