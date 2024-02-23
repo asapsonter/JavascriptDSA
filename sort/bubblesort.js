@@ -14,3 +14,7 @@ function bubbleSort (arr){
     }while(swapped)
    
 }
+
+const arr = [6,3,6,2,1,9,10]
+bubbleSort(arr)
+console.log(arr)

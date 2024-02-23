@@ -1,0 +1,77 @@
+// Find Maximum or Minimum Element
+function findMaxMin(arr) {
+    let max = Math.max(...arr); // Find maximum element
+    let min = Math.min(...arr); // Find minimum element
+    return {max, min};
+}
+
+// Search for an Element
+function searchElement(arr, element) {
+    let index = arr.indexOf(element); // Find index of element
+    return index !== -1 ? index : 'Element not found';
+}
+
+// Count Occurrences
+function countOccurrences(arr, element) {
+    let count = arr.filter(e => e === element).length; // Count occurrences of element
+    return count;
+}
+
+// Find the First or Last Occurrence
+function findFirstLastOccurrence(arr, element, isFirst=true) {
+    let index = isFirst ? arr.indexOf(element) : arr.lastIndexOf(element); // Find first/last occurrence
+    return index !== -1 ? index : 'Element not found';
+}
+
+// Check if an Element Exists
+function elementExists(arr, element) {
+    return arr.includes(element); // Check if element exists
+}
+
+// Find the Index of an Element
+function findIndex(arr, element) {
+    let index = arr.indexOf(element); // Find index of element
+    return index !== -1 ? index : 'Element not found';
+}
+
+// Search in Strings
+function searchString(str, substr) {
+    return str.includes(substr); // Check if substring exists
+}
+
+// Search in 2D Arrays
+function search2DArray(matrix, element) {
+    for(let i=0; i<matrix.length; i++) {
+        if(matrix[i].includes(element)) {
+            return `Element found at row ${i+1}`;
+        }
+    }
+    return 'Element not found';
+}
+
+// Adjacent Sum Greater than K
+function adjacentSum(arr, k) {
+    let pairs = [];
+    for(let i=0; i<arr.length-1; i++) {
+        if(arr[i] + arr[i+1] > k) {
+            pairs.push([arr[i], arr[i+1]]);
+        }
+    }
+    return pairs.length > 0 ? pairs : 'No pairs found';
+}
+
+// Equal Diverse Teams
+function equalTeams(abilities) {
+    abilities.sort((a, b) => b - a);
+    let team1 = [], team2 = [];
+    for(let ability of abilities) {
+        let sum1 = team1.reduce((a, b) => a + b, 0);
+        let sum2 = team2.reduce((a, b) => a + b, 0);
+        if(sum1 <= sum2) {
+            team1.push(ability);
+        } else {
+            team2.push(ability);
+        }
+    }
+    return {team1, team2};
+}
